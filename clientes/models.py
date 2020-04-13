@@ -30,7 +30,7 @@ class Clientes(BaseModel):
     apellido = models.CharField(max_length=20)
     dni = models.CharField(max_length=20)
     red_social = models.CharField(max_length=100)
-    sexo = models.CharField(max_length=1, label='', choices=SEX)
+    sexo = models.CharField(max_length=1, choices=SEX)
 
 
 
