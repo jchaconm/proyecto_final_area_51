@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Últimas ventas</title>
+</head>
+<body>
+
+    <h1> Últimas ventas</h1>
+
+<table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Libro</th>
+        <th>Cliente</th>
+        <th>Cantidad</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for venta in ventas %}
+        <tr>
+          <td>{{ venta.libro.nombre }}</td>
+          <td>{{ venta.cliente.nombre }} {{ venta.cliente.apellido }}</td>
+          <td>{{ venta.cantidad }}</td>
+          <td>{{ venta.fecha_creacion|date:"d-m-Y" }} {{venta.fecha_creacion|time:"h:i a"}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
