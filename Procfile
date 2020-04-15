@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn proy_final_py_A51.wsgi
