@@ -30,6 +30,7 @@ DEBUG = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+ROOT_URLCONF = 'proy_final_py_A51.proy_final_py_A51.urls'
 
 ALLOWED_HOSTS = []
 
