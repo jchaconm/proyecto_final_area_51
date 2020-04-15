@@ -37,7 +37,8 @@ def obtenerResumen(nombre):
     if not seccion_argumento:
         resumen = 'Resumen no disponible'
     else:
-        if not (contenido_argumento := seccion_argumento.findNext('p').text):
+        contenido_argumento =  seccion_argumento.findNext('p').text
+        if not contenido_argumento:
             # En caso no se encuentre el elemento con id argumento
             contenido_argumento = seccion_argumento.parent().findNext('p').text
         resumen = contenido_argumento

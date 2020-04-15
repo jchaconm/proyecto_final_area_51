@@ -27,7 +27,7 @@ class NuevoVentasAdmin(admin.ModelAdmin):
         porcentaje_igv = 18
         precio_sin_igv = lambda x: obj.cantidad * x
 
-        #declaracion de funcion de orden superior
+        #1 . declaracion de funcion de orden superior
         high_ord_func = lambda x, func: porcentaje_igv * func(x)
 
         obj.creado_por = request.user
@@ -35,7 +35,7 @@ class NuevoVentasAdmin(admin.ModelAdmin):
         obj.precio_sin_igv = precio_sin_igv(precio_libro)
         obj.save()
 
-        #Actualizacion stock
+        #2- Actualizacion stock
         obj.libro.stock = obj.libro.stock - obj.cantidad
         obj.libro.save()
 
